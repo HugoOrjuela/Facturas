@@ -23,11 +23,11 @@ public class DetalleModel {
     @JoinColumn(name = "PROD_ID")
     private ProductoModel productoModel;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -10,7 +10,7 @@ import java.util.Date;
 public class FacturaModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(name = "FACT_NUMEROFACTURA", nullable = false)
     private Long numero;
@@ -52,11 +52,11 @@ public class FacturaModel implements Serializable {
         this.id = id;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
