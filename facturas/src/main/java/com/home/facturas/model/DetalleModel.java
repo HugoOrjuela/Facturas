@@ -6,7 +6,7 @@ import javax.persistence.ManyToOne;
 @Table(name = "DETALLE")
 public class DetalleModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "DETA_CANTIDAD", nullable = false)

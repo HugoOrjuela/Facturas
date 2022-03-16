@@ -9,7 +9,7 @@ import java.util.Date;
 @Table(name = "FACTURA")
 public class FacturaModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "FACT_NUMEROFACTURA", nullable = false)
@@ -28,7 +28,7 @@ public class FacturaModel implements Serializable {
     private String nombre;
 
     @Column(name = "FACT_SUBTOTAL", nullable = false)
-    private Long subtotal;
+    private Double subtotal;
 
     @Column(name = "FACT_DESCUENTO", nullable = false)
     private Long descuento;
@@ -37,13 +37,13 @@ public class FacturaModel implements Serializable {
     private Long iva;
 
     @Column(name = "FACT_TOTALDESCUENTO", nullable = false)
-    private Long totalDescuento;
+    private Double totalDescuento;
 
     @Column(name = "FACT_TOTALIMPUESTO", nullable = false)
-    private Long totalImpuesto;
+    private Double totalImpuesto;
 
     @Column(name = "FACT_TOTAL", nullable = false)
-    private Long total;
+    private Double total;
 
     public FacturaModel() {
     }
@@ -100,11 +100,11 @@ public class FacturaModel implements Serializable {
         this.nombre = nombre;
     }
 
-    public Long getSubtotal() {
+    public Double getSubtotal() {
         return subtotal;
     }
 
-    public void setSubtotal(Long subtotal) {
+    public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
     }
 
@@ -124,27 +124,27 @@ public class FacturaModel implements Serializable {
         this.iva = iva;
     }
 
-    public Long getTotalDescuento() {
+    public Double getTotalDescuento() {
         return totalDescuento;
     }
 
-    public void setTotalDescuento(Long totalDescuento) {
+    public void setTotalDescuento(Double totalDescuento) {
         this.totalDescuento = totalDescuento;
     }
 
-    public Long getTotalImpuesto() {
+    public Double getTotalImpuesto() {
         return totalImpuesto;
     }
 
-    public void setTotalImpuesto(Long totalImpuesto) {
+    public void setTotalImpuesto(Double totalImpuesto) {
         this.totalImpuesto = totalImpuesto;
     }
 
-    public Long getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(Long total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 }
