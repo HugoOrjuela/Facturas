@@ -1,21 +1,18 @@
 package com.home.facturas.model;
 import javax.persistence.*;
-import javax.persistence.OneToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
 @Table(name = "DETALLE")
 public class DetalleModel {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    @Column(name = "DETA_CANTIDAD", nullable = false, length = 50)
+    @Column(name = "DETA_CANTIDAD", nullable = false)
     private Long cantidad;
 
-    @Column(name = "DETA_PRECIOUNITARIO", nullable = false, length = 50)
+    @Column(name = "DETA_PRECIOUNITARIO", nullable = false)
     private Long precioUnitario;
 
     @ManyToOne
@@ -25,10 +22,6 @@ public class DetalleModel {
     @ManyToOne
     @JoinColumn(name = "PROD_ID")
     private ProductoModel productoModel;
-
-
-    public DetalleModel() {
-    }
 
     public long getId() {
         return id;
@@ -69,5 +62,4 @@ public class DetalleModel {
     public void setProductoModel(ProductoModel productoModel) {
         this.productoModel = productoModel;
     }
-
 }

@@ -5,10 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "PRODUCTO")
 public class ProductoModel {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "PROD_PRODUCTO", nullable = true, length = 50)
     private String producto;
@@ -39,6 +38,4 @@ public class ProductoModel {
     public ProductoModel(String producto) {
         this.producto = producto;
     }
-
-
 }

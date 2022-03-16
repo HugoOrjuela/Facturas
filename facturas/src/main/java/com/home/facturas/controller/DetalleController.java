@@ -45,6 +45,11 @@ public class DetalleController {
         return detalleReposiroty.findById(id);
     }
 
+    @GetMapping("/factura/{id}")
+    public List<DetalleModel> getByFacId(@PathVariable(value = "id") Long id) {
+        return detalleReposiroty.findByFactId(id);
+    }
+
     @PutMapping("/{id}")
     public Optional<DetalleModel> update(@PathVariable(value = "id") Long id, @RequestBody DetalleModel detalleModel) {
         return detalleReposiroty.findById(id).map(detalle -> {
